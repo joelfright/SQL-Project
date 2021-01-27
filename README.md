@@ -2,8 +2,8 @@
 
 My SQL Project for Sparta Global
 
-`SQL Files` contains all the .sql files for each question
+`/sql` contains all the .sql files for each question
 
-`Excel Files` contains the excel files for 3.2 and 3.4
+`/excel` contains the excel files for questions 3.2 and 3.4
 
-`SQL Project.pdf` contains the documentation
+`SQL Project.pdf` is the full the documentation
