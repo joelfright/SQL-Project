@@ -5,17 +5,17 @@ WHERE c.City = 'Paris' OR c.City = 'London'
 
 --1.2
 SELECT p.ProductID, p.ProductName FROM Products p
-WHERE CHARINDEX('bottles',p.QuantityPerUnit) > 0
+WHERE CHARINDEX('bottle',p.QuantityPerUnit) > 0
 
 --1.3
 SELECT p.ProductID, p.ProductName , s.CompanyName AS "Supplier Name", s.Country FROM Products p
 INNER JOIN Suppliers s ON p.SupplierID = s.SupplierID
-WHERE CHARINDEX('bottles',p.QuantityPerUnit) > 0
+WHERE CHARINDEX('bottle',p.QuantityPerUnit) > 0
 
 --1.4
 SELECT c.CategoryName, COUNT(*) AS "Num of Products" FROM Products p 
 INNER JOIN Categories c ON p.CategoryID = c.CategoryID
-GROUP BY p.CategoryID, c.CategoryName ORDER BY "Num of Products"
+GROUP BY p.CategoryID, c.CategoryName ORDER BY "Num of Products" DESC
 
 --1.5
 SELECT CONCAT(e.TitleOfCourtesy , ' ' , e.FirstName , ' ' , e.LastName) AS "Name", e.City FROM Employees e
