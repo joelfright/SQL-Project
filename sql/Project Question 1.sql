@@ -34,8 +34,10 @@ SELECT COUNT(*) AS "Num of Orders w/ +100 Freight & from UK or USA" FROM Orders 
 WHERE o.Freight > 100 AND (o.ShipCountry = 'UK' OR o.ShipCountry = 'USA')
 
 --1.8
-SELECT TOP 1 o.OrderID,od.Discount FROM Orders o
-INNER JOIN [Order Details] od ON o.OrderID = od.OrderID
-ORDER BY od.Discount DESC
+SELECT TOP 1 od.OrderID,
+    SUM(od.Discount*od.UnitPrice*od.Quantity) AS "Value of Discount" 
+FROM [Order Details] od
+GROUP BY od.OrderID
+ORDER BY "Value of Discount" DESC
 
 SELECT * FROM Region
