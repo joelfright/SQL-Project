@@ -9,3 +9,5 @@ This entailed using Microsoft Azure alongside the sample [Northwind](https://doc
 `/excel` contains the excel files for questions 3.2 and 3.4
 
 `SQL Project.pdf` is the full the documentation
+
+![Northwind Database ER Diagram](https://docs.yugabyte.com/images/sample-data/northwind/northwind-er-diagram.png)
